@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth and Moon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #ccc;
+        }
+
+        .container {
+            height: 100vh;
+            background: black;
+            position: relative;
+            overflow: hidden;
+            background: #000;
+
+
+            background:
+                linear-gradient( red 40px,),
+                linear-gradient( #232927 4%, transparent 4%) 4px 4px,
+                linear-gradient( #e3d7bf 5%, transparent 5%) 4px 4px,
+                linear-gradient( #e3d7bf 8.5%, transparent 8%) 4px 4px,
+                linear-gradient( #e3d7bf 7.5%, transparent 5%) 4px 4px,
+                linear-gradient( #e3d7bf 7.5%, transparent 7%) 4px 4px;;
+            background-color: #232927;
+            /* background-size: 40px 40px; */
+        }
+
+        .orbit {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .palet {
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            box-shadow: 0 0 .5rem .25rem transparent;
+        }
+
+        @keyframes planetRotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .sun {
+            /* animation: planetRotate 0s infinite linear; */
+        }
+
+        .sun>.palet {
+            width: 5rem;
+            background-color: red;
+        }
+
+        .mercury {
+            animation: planetRotate 16s infinite linear;
+        }
+
+        .mercury>.palet {
+            width: 1.5rem;
+            background: rgb(200, 200, 200);
+            margin-left: 15%
+        }
+
+        .venus {
+            animation: planetRotate 58s infinite linear;
+        }
+
+        .venus>.palet {
+            width: 1.5rem;
+            background: rgb(255, 123, 0);
+            margin-left: 30%;
+        }
+
+        .earth {
+            animation: planetRotate 36s infinite linear;
+        }
+
+        .earth>.palet {
+            width: 2rem;
+            background: rgb(0, 200, 255);
+            margin-left: 45%;
+            position: relative;
+        }
+
+        .moon {
+            animation: planetRotate 1s infinite linear;
+        }
+
+        .moon>.palet {
+            width: 1rem;
+            background: rgb(255, 255, 0);
+            margin-left: 200%;
+        }
+
+        .mars {
+            animation: planetRotate 78s infinite linear;
+        }
+
+        .mars>.palet {
+            width: 1.8rem;
+            background: rgb(255, 0, 0);
+            margin-left: 60%;
+        }
+
+        .jupiter {
+            animation: planetRotate 40s infinite linear;
+        }
+
+        .jupiter>.palet {
+            width: 3.4rem;
+            background: rgb(189, 155, 4);
+            margin-left: 75%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="sun orbit">
+            <div class="palet">sun</div>
+        </div>
+
+        <div class="mercury orbit">
+            <div class="palet">mercury</div>
+        </div>
+
+        <div class="venus orbit">
+            <div class="palet">venus</div>
+        </div>
+
+        <div class="earth orbit">
+            <div class="palet">
+                earth
+                <div class="moon orbit">
+                    <div class="palet">moon</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mars orbit">
+            <div class="palet">mars</div>
+        </div>
+
+        <div class="jupiter orbit">
+            <div class="palet">jupiter</div>
+        </div>
+    </div>
+</body>
+
+</html>
